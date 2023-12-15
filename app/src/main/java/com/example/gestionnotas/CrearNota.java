@@ -47,6 +47,7 @@ public class CrearNota extends AppCompatActivity {
         if(id == R.id.back){
             Intent i = new Intent(CrearNota.this,MainActivity.class);
             startActivity(i);
+            finish();
         }
 
         return true;

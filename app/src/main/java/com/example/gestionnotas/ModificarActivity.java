@@ -37,8 +37,9 @@ public class ModificarActivity extends AppCompatActivity {
                         String id = String.valueOf(n.getId());
                         if(ad.actualizarNota( id,txt.getText().toString())){
                             Toast.makeText(ModificarActivity.this, "Nota actualizada", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(ModificarActivity.this,MainActivity.class);
+                            Intent i = new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(i);
+
                         }
             }
         });
@@ -52,6 +53,7 @@ public class ModificarActivity extends AppCompatActivity {
         if(id == R.id.back){
             Intent i = new Intent(ModificarActivity.this,MainActivity.class);
             startActivity(i);
+            finish();
         }
 
         return true;

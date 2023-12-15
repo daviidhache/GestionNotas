@@ -112,11 +112,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent i = new Intent(MainActivity.this,ModificarActivity.class);
+                Intent i = new Intent(getApplicationContext(),ModificarActivity.class);
                 Nota n = notas.get(position);
                 i.putExtra("nota",n);
                 startActivity(i);
-
+                finish();
 
                 return false;
             }
@@ -135,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         }if (id == R.id.agregar){
             Intent i = new Intent(MainActivity.this,CrearNota.class);
             startActivity(i);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
